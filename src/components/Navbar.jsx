@@ -2,6 +2,7 @@ import React from 'react'
 import birdLogo from '../../public/bird_logo.svg'
 import Image from 'next/image'
 import Navlink from './Navlink';
+import ActionButton from './ActionButton';
 
 const Navbar = () => {
 
@@ -14,7 +15,7 @@ const Navbar = () => {
     ];
 
     return (
-        <div className='h-[70px] mt-5 w-screen max-w-7xl flex items-center justify-evenly m-auto'>
+        <div className='sticky top-0 z-50 h-[70px] mt-5 w-screen max-w-7xl flex items-center justify-evenly m-auto'>
             <div className='flex items-center gap-0 -mx-20'>
             <Image 
                 // className='bg-blue-500'
@@ -31,9 +32,7 @@ const Navbar = () => {
                     <Navlink  key={index} name={item.title} route={item.route}></Navlink>
                 ))}
             </div>
-            <div className='ring ring-2 ring-[#1addba] p-4  font-bold hover:bg-[#1addba] hover:text-black cursor-pointer'>
-                Call Now
-            </div>
+            <ActionButton text="Call Now"></ActionButton>
             
         </div>
     )
