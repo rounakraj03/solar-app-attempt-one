@@ -7,7 +7,8 @@ import Windmill from './Windmill'
 const HomeSecondComponent = () => {
   return (
     <div className='flex'>
-        <div className='w-1/2 h-[calc(100vh-70px)] flex items-center mt-3 relative px-20'>
+        {/* <div className='w-1/2 h-[calc(100vh-70px)] flex items-center mt-3 relative px-20'> */}
+        <div className='w-1/2 h-[[calc(100vh-70px)]] flex items-center mt-3 relative px-20'>
           {/* <Image
             style={{ width: "50vw", height: "80vh", objectFit: 'fill' }}
             className='rounded-xl'
