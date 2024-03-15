@@ -2,18 +2,20 @@ import Image from 'next/image'
 import React from 'react'
 import ActionButton from './ActionButton'
 import { FaBolt } from 'react-icons/fa'
+import Windmill from './Windmill'
 
 const HomeSecondComponent = () => {
   return (
     <div className='flex'>
         <div className='w-1/2 h-[calc(100vh-70px)] flex items-center mt-3 relative px-20'>
-          <Image
+          {/* <Image
             style={{ width: "50vw", height: "80vh", objectFit: 'fill' }}
             className='rounded-xl'
             src="/windmill.svg"
             alt="My SVG"
             width="350"
-            height="350" />
+            height="350" /> */}
+            <Windmill/>
         </div>
 
         <div className='w-1/2 h-[calc(100vh-70px)]  flex flex-col justify-center align-middle gap-12 px-20'>
