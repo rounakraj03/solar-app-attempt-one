@@ -139,8 +139,11 @@ const PriceCalculator = () => {
                     <h1>Savings: {savings}</h1>
                     <h1>Total Price: {totalPrice}</h1>
                 </div>
+            <div className='h-[1px] w-screen  bg-white'></div>
+
 
             </div>
+            
         </div>
     )
 }
