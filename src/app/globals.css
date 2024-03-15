@@ -6,3 +6,27 @@ body {
   background-color: black;
   color: white;
 }
+
+
+.range-slider {
+  -webkit-appearance: none; /* Remove default styles */
+  width: 510px; /* Set width of the track */
+  height: 10px; /* Set height of the track */
+  background-color: #1addba; /* Color of the unfilled track */
+  border-radius: 50px;
+
+  /* Customize thumb (circle) */
+  &::-webkit-slider-thumb {
+      -webkit-appearance: none; /* Remove default styles */
+      width: 20px; /* Set width of the thumb */
+      height: 20px; /* Set height of the thumb */
+      border-radius: 150%; /* Make it a circle */
+      background-color: green; /* Color of the thumb */
+      cursor: pointer; /* Add cursor pointer */
+  }
+
+  /* Customize filled track */
+  &::-webkit-slider-runnable-track {
+      background-color: green; /* Color of the filled track */
+  }
+}

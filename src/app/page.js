@@ -2,6 +2,7 @@ import ActionButton from '@/components/ActionButton'
 import Home from '@/components/DummyPage';
 import HomeSecondComponent from '@/components/HomeSecondComponent';
 import Navbar from '@/components/Navbar'
+import PriceCalculator from '@/components/PriceCalculator';
 import Image from 'next/image'
 import React from 'react'
 import { FaBolt } from 'react-icons/fa';
@@ -68,6 +69,9 @@ const page = () => {
 
       {/* SECOND CONTAINER */}
       <HomeSecondComponent></HomeSecondComponent>
+
+      {/* THIRD CONTAINER */}
+      <PriceCalculator></PriceCalculator>
 
 
 
