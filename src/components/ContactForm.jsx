@@ -17,7 +17,7 @@ const ContactForm = () => {
     }
 
     return (
-        <div className='w-screen h-200vh px-20 pb-20 flex flex-col items-center gap-10'>
+        <div className='w-screen h-200vh px-20 flex flex-col items-center gap-10'>
             <h1 className='text-6xl font-semibold max-w-[60vw] m-auto text-center'>
                 Contact Us
             </h1>

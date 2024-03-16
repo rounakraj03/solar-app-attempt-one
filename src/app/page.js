@@ -1,6 +1,7 @@
 import ActionButton from '@/components/ActionButton'
 import ContactForm from '@/components/ContactForm';
 import Home from '@/components/DummyPage';
+import FooterPage from '@/components/Footer';
 import HappyClients from '@/components/HappyClients';
 import HomeSecondComponent from '@/components/HomeSecondComponent';
 import Navbar from '@/components/Navbar'
@@ -80,6 +81,9 @@ const page = () => {
 
       {/* FIFTH CONTAINER */}
       <ContactForm></ContactForm>
+
+      {/* SIXTH CONTAINER */}
+      <FooterPage></FooterPage>
 
 
     </div>

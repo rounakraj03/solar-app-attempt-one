@@ -25,7 +25,7 @@ const Navbar = () => {
                 height={100}
                 priority
             />
-            <h1  className='-m-4 font-bold text-xl text-white'>ANANTA SOLAR</h1>
+            <h1  className='-m-4 font-bold text-xl text-white'>ANANTA POWER TECH</h1>
             </div>
             <div className='  px-20  '>
                 {routeList.map((item, index) => (
