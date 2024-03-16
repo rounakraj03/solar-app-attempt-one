@@ -9,24 +9,22 @@ body {
 
 
 .range-slider {
-  -webkit-appearance: none; /* Remove default styles */
-  width: 510px; /* Set width of the track */
-  height: 10px; /* Set height of the track */
-  background-color: #1addba; /* Color of the unfilled track */
+  -webkit-appearance: none;
+  width: 510px;
+  height: 10px;
+  background-color: #1addba;
   border-radius: 50px;
+}
 
-  /* Customize thumb (circle) */
-  &::-webkit-slider-thumb {
-      -webkit-appearance: none; /* Remove default styles */
-      width: 20px; /* Set width of the thumb */
-      height: 20px; /* Set height of the thumb */
-      border-radius: 150%; /* Make it a circle */
-      background-color: green; /* Color of the thumb */
-      cursor: pointer; /* Add cursor pointer */
-  }
+.range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 150%;
+  background-color: green;
+  cursor: pointer;
+}
 
-  /* Customize filled track */
-  &::-webkit-slider-runnable-track {
-      background-color: green; /* Color of the filled track */
-  }
+.range-slider::-webkit-slider-runnable-track {
+  background-color: green;
 }
