@@ -1,4 +1,13 @@
+"use client"
+
+import Image from 'next/image';
 import React from 'react'
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+
 
 const reviews = [
     {
@@ -25,13 +34,16 @@ const reviews = [
 
 const HappyClients = () => {
     return (
-        <div className='w-screen h-screen px-20 flex flex-col items-center gap-10' >
+        <div className='w-screen h-200vh px-20 pb-20 flex flex-col items-center gap-10 ' >
             <h1 className='text-2xl font-normal '>Our Happy Clients</h1>
-            <h1 className='text-6xl font-semibold max-w-[60vw] m-auto text-center'>Here's what our <span className="text-[#1addba]">satisfied clients</span> are saying.</h1>
-            <div className='h-[calc(100vh-70px)]  flex flex-col justify-start items-center gap-20 py-5'>
-            </div>
-        </div>
-    )
-}
+            <h1 className='text-6xl font-semibold max-w-[60vw] m-auto text-center'>
+                Here's what our <span className="text-[#1addba]">satisfied clients</span> are saying.
+            </h1>
+            
+            
+
+    </div>
+  );
+};
 
 export default HappyClients
