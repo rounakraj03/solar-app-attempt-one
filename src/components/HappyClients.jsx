@@ -68,6 +68,8 @@ const HappyClients = () => {
                     ))}
                 </Swiper>
             </div>
+      <div className='h-[1px] w-screen mt-5 bg-white'></div>
+
         </div>
     );
 };

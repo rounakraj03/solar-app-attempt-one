@@ -1,4 +1,5 @@
 import ActionButton from '@/components/ActionButton'
+import ContactForm from '@/components/ContactForm';
 import Home from '@/components/DummyPage';
 import HappyClients from '@/components/HappyClients';
 import HomeSecondComponent from '@/components/HomeSecondComponent';
@@ -75,9 +76,10 @@ const page = () => {
       <PriceCalculator></PriceCalculator>
 
       {/* FOURTH CONTAINER */}
-     <HappyClients></HappyClients>
+      <HappyClients></HappyClients>
 
-
+      {/* FIFTH CONTAINER */}
+      <ContactForm></ContactForm>
 
 
     </div>
