@@ -1,44 +1,49 @@
 import Image from 'next/image'
 import birdLogo from '../../public/bird_logo.svg'
 import React from 'react'
+import { MdCall } from "react-icons/md";
+import { FaWhatsapp } from "react-icons/fa";
+import { CiMail } from "react-icons/ci";
 
 const FooterPage = () => {
     return (
-        <div className='w-full   pb-10 flex flex-col items-center  '>
+        <div className='w-full  flex flex-col items-center justify-center  '>
             <div className='flex w-full'>
-                <div className='w-1/3 flex flex-col bg-yellow-200'>
+                <div className='w-1/3 h-[200px] flex flex-col items-center'>
                     <Image
                         // className='bg-blue-500'
                         src={birdLogo}
                         alt="My SVG"
-                        width={100}
-                        height={100}
+                        width={150}
+                        height={150}
                         priority
                     />
                     <h1 className='-m-4 font-bold text-xl text-white'>ANANTA POWER TECH</h1>
                 </div>
-                <div className='w-1/3 flex flex-col gap-5 justify-center bg-red-400'>
+                <div className='w-1/3 h-[200px] flex flex-col gap-10 justify-center items-center '>
                     <h3 className='-m-4 font-bold text-xl text-white'>Useful Links</h3>
-                    <div className='flex gap-5'>
-                        <p>Home</p>
-                        <p>Calculate EMI</p>
+                    <div className='flex flex-col items-center gap-5'>
+                        <div className='flex gap-5'>
+                            <p className='cursor-pointer'>Home</p>
+                            <p className='cursor-pointer'>Calculate-EMI</p>
+                        </div>
+                        <div className='flex gap-5'>
+                            <p className='cursor-pointer'>Contact</p>
+                            <p className='cursor-pointer'>About</p>
+                        </div>
                     </div>
-                    <div className='flex gap-5'>
-                        <p>Contact</p>
-                        <p>About</p>
+
+                </div>
+                <div className='w-1/3 h-[200px] flex flex-col gap-5 justify-center items-center'>
+                    <h3 className='-m-4 font-bold text-xl text-white'>Info</h3>
+                    <div className='flex flex-col gap-3'>
+                        <p className='cursor-pointer flex gap-5 items-center justify-center'><MdCall /> 9873073373</p>
+                        <p className='cursor-pointer flex gap-5 items-center justify-center'><FaWhatsapp /> 9873073373</p>
+                        <p className='cursor-pointer flex gap-5 items-center justify-center'><CiMail /> anantapowertech@gmail.com</p>
                     </div>
+
                 </div>
-                <div className='w-1/3 flex flex-col bg-green-300'>
-                    <Image
-                        // className='bg-blue-500'
-                        src={birdLogo}
-                        alt="My SVG"
-                        width={100}
-                        height={100}
-                        priority
-                    />
-                    <h1 className='-m-4 font-bold text-xl text-white'>ANANTA POWER TECH</h1>
-                </div>
+
             </div>
 
         </div>
