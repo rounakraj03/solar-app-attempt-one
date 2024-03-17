@@ -8,12 +8,11 @@ const Navbar = () => {
 
 
     const routeList = [
-        {title: "Home", route: "/"},
-        {title: "Calculate EMI", route: "/calculate-emi"},
-        {title: "About", route: "/about"},
-        {title: "Contact", route: "/contact"},
-    ];
-
+        { title: "Home", route: "#home" },
+        { title: "Calculate EMI", route: "#calculate-emi" },
+        { title: "About", route: "#about" },
+        { title: "Contact", route: "#contact" },
+      ];
     return (
         <div className=' h-[70px] mt-5 w-screen max-w-7xl flex items-center justify-evenly m-auto'>
             <div className='flex items-center gap-0 -mx-20'>

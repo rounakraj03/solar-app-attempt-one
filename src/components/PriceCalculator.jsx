@@ -2,7 +2,7 @@
 
 import { useRef, useState } from "react";
 
-const PriceCalculator = () => {
+const PriceCalculator = ({id}) => {
 
     const priceRef = useRef(null);
     const [priceValue, setPriceValue] = useState(50);
@@ -80,7 +80,7 @@ const PriceCalculator = () => {
 
 
     return (
-        <div className='w-screen h-screen px-20 flex flex-col items-center gap-10' >
+        <div className='w-screen h-screen px-20 flex flex-col items-center gap-10' id={id} >
             <h1 className='text-6xl font-semibold '>Calculate Your Cost</h1>
             <div className='h-[calc(100vh-70px)]  flex flex-col justify-start items-center gap-20 py-5'>
                 <div className="flex items-center justify-evenly gap-10" ref={unitOfEnergyRef}>

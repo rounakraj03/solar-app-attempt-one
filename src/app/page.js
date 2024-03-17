@@ -15,7 +15,7 @@ const page = () => {
 
     <div className='h-screen w-screen flex flex-col relative'>
       <div className='h-[90px] w-full fixed bg-black z-50'><Navbar/></div>
-      <div className='flex mt-10 pt-10'>
+      <div className='flex mt-10 pt-10 '  id='home'>
         <div className='w-1/2 h-[calc(100vh-70px)]  flex flex-col justify-center align-middle gap-12 px-20'>
           <h1 className='text-6xl font-semibold '>Switch To Green With Innovative Solar Panel</h1>
           <p className='italic text-2xl font-medium text-gray-200'>Green Energy. Clean Energy.</p>
@@ -76,15 +76,15 @@ const page = () => {
       <HomeSecondComponent></HomeSecondComponent>
 
       {/* THIRD CONTAINER */}
-      <PriceCalculator></PriceCalculator>
+      <PriceCalculator  id="calculate-emi"></PriceCalculator>
 
-      <SolarSteps></SolarSteps>
+      <SolarSteps id="about"></SolarSteps>
 
       {/* FOURTH CONTAINER */}
       <HappyClients></HappyClients>
 
       {/* FIFTH CONTAINER */}
-      <ContactForm></ContactForm>
+      <ContactForm  id="contact"></ContactForm>
 
       {/* SIXTH CONTAINER */}
       <FooterPage></FooterPage>

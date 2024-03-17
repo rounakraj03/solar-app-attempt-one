@@ -1,10 +1,26 @@
-import Link from 'next/link'
-import React from 'react'
+"use client"
 
-const Navlink = ({name, route}) => {
+import React from 'react';
+
+const Navlink = ({ name, route }) => {
+  const handleClick = (event) => {
+    event.preventDefault(); // Prevent default link behavior
+    window.location.hash = route;
+    const section = document.querySelector(route);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <Link  href={route} className='font-semibold mx-5'>{name}</Link>
-  )
-}
+    <button
+      onClick={handleClick}
+      className="font-semibold mx-5 hover:text-[#1addba]"
+      style={{ cursor: 'pointer' }}
+    >
+      {name}
+    </button>
+  );
+};
 
-export default Navlink
+export default Navlink;

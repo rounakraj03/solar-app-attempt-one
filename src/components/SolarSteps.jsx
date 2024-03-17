@@ -2,7 +2,7 @@
 import React, { useRef } from 'react'
 import { motion, useInView, useScroll } from 'framer-motion';
 
-const SolarSteps = () => {
+const SolarSteps = ({id}) => {
 
     const experienceRef = useRef();
     const isExperienceInView = useInView(experienceRef);
@@ -35,7 +35,7 @@ const SolarSteps = () => {
 
     return (
         <div className='w-screen h-[200vh] px-20 '>
-            <h1 className='text-6xl font-semibold max-w-[60vw] m-auto  mb-10 text-center'>
+            <h1 className='text-6xl font-semibold max-w-[60vw] m-auto  mb-10 text-center' id={id}>
                 How we works
             </h1>
             <div className='md:px-10'>
