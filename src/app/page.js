@@ -6,6 +6,7 @@ import HappyClients from '@/components/HappyClients';
 import HomeSecondComponent from '@/components/HomeSecondComponent';
 import Navbar from '@/components/Navbar'
 import PriceCalculator from '@/components/PriceCalculator';
+import SolarSteps from '@/components/SolarSteps';
 import Image from 'next/image'
 import React from 'react'
 import { FaBolt } from 'react-icons/fa';
@@ -75,6 +76,8 @@ const page = () => {
 
       {/* THIRD CONTAINER */}
       <PriceCalculator></PriceCalculator>
+
+      <SolarSteps></SolarSteps>
 
       {/* FOURTH CONTAINER */}
       <HappyClients></HappyClients>
