@@ -1,8 +1,24 @@
 "use client"
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Navlink = ({ name, route }) => {
+  const [isActive, setIsActive] = useState(false);
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      console.log("window.location.hash", window.location.hash)
+      setIsActive(window.location.hash === route);
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+    handleHashChange(); // Check initial hash
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }, [route]);
+
   const handleClick = (event) => {
     event.preventDefault(); // Prevent default link behavior
     window.location.hash = route;
@@ -15,7 +31,7 @@ const Navlink = ({ name, route }) => {
   return (
     <button
       onClick={handleClick}
-      className="font-semibold mx-5 hover:text-[#1addba]"
+      className={`font-semibold mx-5 hover:text-[#1addba] ${isActive ? 'text-[#1addba]' : ''}`}
       style={{ cursor: 'pointer' }}
     >
       {name}
