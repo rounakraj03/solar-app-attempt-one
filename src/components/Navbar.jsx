@@ -9,13 +9,13 @@ const Navbar = () => {
 
     const routeList = [
         {title: "Home", route: "/"},
+        {title: "Calculate EMI", route: "/calculate-emi"},
+        {title: "About", route: "/about"},
         {title: "Contact", route: "/contact"},
-        {title: "About us", route: "/about-us"},
-        {title: "Privacy policy", route: "/privacy-policy"},
     ];
 
     return (
-        <div className='sticky top-0 z-50 h-[70px] mt-5 w-screen max-w-7xl flex items-center justify-evenly m-auto'>
+        <div className=' h-[70px] mt-5 w-screen max-w-7xl flex items-center justify-evenly m-auto'>
             <div className='flex items-center gap-0 -mx-20'>
             <Image 
                 // className='bg-blue-500'

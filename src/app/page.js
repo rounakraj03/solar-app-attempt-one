@@ -1,6 +1,5 @@
 import ActionButton from '@/components/ActionButton'
 import ContactForm from '@/components/ContactForm';
-import Home from '@/components/DummyPage';
 import FooterPage from '@/components/Footer';
 import HappyClients from '@/components/HappyClients';
 import HomeSecondComponent from '@/components/HomeSecondComponent';
@@ -13,8 +12,10 @@ import { FaBolt } from 'react-icons/fa';
 
 const page = () => {
   return (
-    <div className='h-screen w-screen bg-gradient-conic  before:dark:to-blue-700 flex flex-col'>
-      <div className='flex'>
+
+    <div className='h-screen w-screen flex flex-col relative'>
+      <div className='h-[90px] w-full fixed bg-black z-50'><Navbar/></div>
+      <div className='flex mt-10 pt-10'>
         <div className='w-1/2 h-[calc(100vh-70px)]  flex flex-col justify-center align-middle gap-12 px-20'>
           <h1 className='text-6xl font-semibold '>Switch To Green With Innovative Solar Panel</h1>
           <p className='italic text-2xl font-medium text-gray-200'>Green Energy. Clean Energy.</p>
