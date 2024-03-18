@@ -85,8 +85,8 @@ const PriceCalculator = ({id}) => {
 
 
     return (
-        <div className='w-screen h-screen px-20 flex flex-col items-center gap-10' id={id} >
-            <h1 className='text-6xl font-semibold '>Calculate Your Cost</h1>
+        <div className='w-screen h-screen px-5 md:px-20 flex flex-col items-center gap-10 mt-10 md:mt-0' id={id} >
+            <h1 className='text-4xl md:text-6xl font-bold md:font-semibold '>Calculate Your Cost</h1>
             <div className='h-[calc(100vh-70px)]  flex flex-col justify-start items-center gap-20 py-5'>
                 <div className="flex items-center justify-evenly gap-10" ref={unitOfEnergyRef}>
                     <h2 className="text-xl font-semibold">Units: </h2>

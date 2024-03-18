@@ -82,6 +82,7 @@ const page = () => {
       </div>
 
       {/* SECOND CONTAINER */}
+      <div className='md-5 md:mt-0'></div>
       <HomeSecondComponent></HomeSecondComponent>
 
       {/* THIRD CONTAINER */}
