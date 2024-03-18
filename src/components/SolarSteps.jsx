@@ -45,13 +45,13 @@ const SolarSteps = ({id}) => {
                     <motion.h1
                         initial={{ x: "-300px" }}
                         animate={isExperienceInView ? { x: 0 } : {}}
-                        transition={{ delay: 0.2 }}
+                        transition={{ delay: 0.5 }}
                         className='font-bold text-2xl my-20' >EXPERIENCE</motion.h1>
                     {/* EXPEIRENCE LIST */}
                     <motion.div
-                        initial={{ x: "-300px" }}
-                        animate={isExperienceInView ? { x: 0 } : {}}
-                        transition={{ delay: 0.2 }}
+                        // initial={{ x: "-300px" }}
+                        // animate={isExperienceInView ? { x: 0 } : {}}
+                        // transition={{ delay: 2 }}
                         className='text-black'>
                         {/* EXPERIENCE LIST ITEM */}
 

@@ -1,6 +1,6 @@
 "use client"
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const PriceCalculator = ({id}) => {
 
@@ -19,6 +19,11 @@ const PriceCalculator = ({id}) => {
     const [monthlyEMI, setMonthlyEMI] = useState(0);
 
 
+    useEffect(() => {
+        calculateSavings();
+        calculateTotalPrice();
+        calculateEMI();
+    })
 
     const calculateSavings = () => {
         // const savings = unitOfEnergy * tenure * 0.1;
