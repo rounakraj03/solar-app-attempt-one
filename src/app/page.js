@@ -14,10 +14,19 @@ const page = () => {
   return (
 
     <div className='h-screen w-screen flex flex-col relative'>
-      <div className='min-h-[70px] max-h-[400px] w-full fixed bg-black z-50 '><Navbar/></div>
-      <div className='flex mt-[120px] md:mt-10 pt-10 '  id='home'>
-        <div className='w-1/2 flex flex-col justify-center  gap-12 px-20'>
-          <h1 className='text-6xl font-semibold '>Switch To Green With Innovative Solar Panel</h1>
+      <div className='min-h-[70px] max-h-[400px] w-full fixed bg-black z-50 '><Navbar /></div>
+      <div className='md:flex  mt-[100px] md:mt-20 pt-10 ' id='home'>
+        <div className='md:hidden '>
+        <Image
+          style={{ width: "300px", height: "200px", objectFit: 'fill' }}
+          className=' rounded-xl m-auto  mb-10'
+          src="/worker.jpg"
+          alt="My SVG"
+          width="350"
+          height="350" />
+        </div>
+        <div className=' w-full md:w-1/2 flex flex-col justify-center  gap-12 px-10 md:px-20'>
+          <h1 className='text-4xl md:text-6xl font-semibold '>Switch To Green With Innovative Solar Panel</h1>
           <p className='italic text-2xl font-medium text-gray-200'>Green Energy. Clean Energy.</p>
           <div className='flex justify-start gap-5'>
             <ActionButton text="Get a Quote"></ActionButton>
@@ -52,7 +61,7 @@ const page = () => {
           </div>
         </div>
 
-        <div className='w-1/2 h-[calc(100vh-70px)] flex items-center mt-3 relative'>
+        <div className='hidden w-1/2 h-[calc(100vh-70px)] md:flex items-center mt-3 relative'>
           <Image
             style={{ width: "40vw", height: "80vh", objectFit: 'cover' }}
             className='rounded-xl'
@@ -76,7 +85,7 @@ const page = () => {
       <HomeSecondComponent></HomeSecondComponent>
 
       {/* THIRD CONTAINER */}
-      <PriceCalculator  id="calculate-emi"></PriceCalculator>
+      <PriceCalculator id="calculate-emi"></PriceCalculator>
 
       <SolarSteps id="about"></SolarSteps>
 
@@ -84,7 +93,7 @@ const page = () => {
       <HappyClients></HappyClients>
 
       {/* FIFTH CONTAINER */}
-      <ContactForm  id="contact"></ContactForm>
+      <ContactForm id="contact"></ContactForm>
 
       {/* SIXTH CONTAINER */}
       <FooterPage></FooterPage>

@@ -97,7 +97,7 @@ const Navbar = () => {
                 <motion.div
                     variants={menuVariants} animate={!isCollapsed ? "opened" : "closed"}
                 >
-                    <div className='w-full h-[200px]  flex flex-col gap-5 items-start py-5 px-1'>
+                    <div className='w-full flex flex-col gap-5 items-start py-5 px-1'>
                         {routeList.map((item, index) => (
                             <Navlink key={index} name={item.title} route={item.route} closeMenu={changeIsCollapsed}></Navlink>
                         ))}
