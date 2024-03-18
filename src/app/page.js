@@ -14,9 +14,9 @@ const page = () => {
   return (
 
     <div className='h-screen w-screen flex flex-col relative'>
-      <div className='h-[90px] w-full fixed bg-black z-50'><Navbar/></div>
-      <div className='flex mt-10 pt-10 '  id='home'>
-        <div className='w-1/2 h-[calc(100vh-70px)]  flex flex-col justify-center align-middle gap-12 px-20'>
+      <div className='min-h-[70px] max-h-[400px] w-full fixed bg-black z-50 '><Navbar/></div>
+      <div className='flex mt-[120px] md:mt-10 pt-10 '  id='home'>
+        <div className='w-1/2 flex flex-col justify-center  gap-12 px-20'>
           <h1 className='text-6xl font-semibold '>Switch To Green With Innovative Solar Panel</h1>
           <p className='italic text-2xl font-medium text-gray-200'>Green Energy. Clean Energy.</p>
           <div className='flex justify-start gap-5'>

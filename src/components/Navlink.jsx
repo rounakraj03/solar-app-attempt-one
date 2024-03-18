@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 
-const Navlink = ({ name, route }) => {
+const Navlink = ({ name, route, closeMenu }) => {
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
@@ -20,7 +20,8 @@ const Navlink = ({ name, route }) => {
   }, [route]);
 
   const handleClick = (event) => {
-    event.preventDefault(); // Prevent default link behavior
+    event.preventDefault();
+    closeMenu(); 
     window.location.hash = route;
     const section = document.querySelector(route);
     if (section) {
