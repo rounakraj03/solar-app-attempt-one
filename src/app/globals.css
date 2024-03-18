@@ -28,3 +28,14 @@ body {
 .range-slider::-webkit-slider-runnable-track {
   background-color: green;
 }
+
+@media screen and (max-width: 786px) {
+  .range-slider {
+    -webkit-appearance: none;
+    width: 100px;
+    height: 10px;
+    background-color: #1addba;
+    border-radius: 50px;
+  }
+
+}

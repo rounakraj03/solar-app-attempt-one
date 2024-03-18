@@ -87,8 +87,8 @@ const PriceCalculator = ({id}) => {
     return (
         <div className='w-screen h-screen px-5 md:px-20 flex flex-col items-center gap-10 mt-10 md:mt-0' id={id} >
             <h1 className='text-4xl md:text-6xl font-bold md:font-semibold '>Calculate Your Cost</h1>
-            <div className='h-[calc(100vh-70px)]  flex flex-col justify-start items-center gap-20 py-5'>
-                <div className="flex items-center justify-evenly gap-10" ref={unitOfEnergyRef}>
+            <div className='h-full  flex flex-col justify-start items-center gap-12 md:gap-20 py-5 overflow-x-hidden'>
+                <div className="flex items-center justify-evenly gap-5 md:gap-10" ref={unitOfEnergyRef}>
                     <h2 className="text-xl font-semibold">Units: </h2>
                     <input
                         onChange={(e) => updateEnergy(e)}
@@ -99,7 +99,7 @@ const PriceCalculator = ({id}) => {
                         step={50}
                         className="range-slider"
                     ></input>
-                    <h2 className="font-semibold text-2xl underline"
+                    <h2 className="font-semibold text-xl md:text-2xl underline"
                         style={{ textDecorationSkipInk: 'none', textDecorationThickness: '2px', textDecorationLine: 'underline' }}>
                         {unitOfEnergy} unit
                     </h2>
@@ -116,7 +116,7 @@ const PriceCalculator = ({id}) => {
                         step={0.25}
                         className="range-slider"
                     ></input>
-                    <h2 className="font-semibold text-2xl underline"
+                    <h2 className="font-semibold text-xl md:text-2xl underline"
                         style={{ textDecorationSkipInk: 'none', textDecorationThickness: '2px', textDecorationLine: 'underline' }}>
                         {interest} %
                     </h2>
@@ -133,7 +133,7 @@ const PriceCalculator = ({id}) => {
                         step={0.5}
                         className="range-slider"
                     ></input>
-                    <h2 className="font-semibold text-2xl underline"
+                    <h2 className="font-semibold text-xl md:text-2xl underline"
                         style={{ textDecorationSkipInk: 'none', textDecorationThickness: '2px', textDecorationLine: 'underline' }}>
                         {tenure} years
                     </h2>

@@ -2,7 +2,7 @@
 import React, { useRef } from 'react'
 import { motion, useInView, useScroll } from 'framer-motion';
 
-const SolarSteps = ({id}) => {
+const SolarSteps = ({ id }) => {
 
     const experienceRef = useRef();
     const isExperienceInView = useInView(experienceRef);
@@ -10,32 +10,32 @@ const SolarSteps = ({id}) => {
 
     const steps = [
         {
-          name: "Site Survey",
-          image: "/worker.jpg",
-          desc: "Check if the site is good for solar panels by looking at the roof, shade, and local rules."
+            name: "Site Survey",
+            image: "/worker.jpg",
+            desc: "Check if the site is good for solar panels by looking at the roof, shade, and local rules."
         },
         {
-          name: "System Design",
-          image: "/worker.jpg",
-          desc: "Plan how much energy is needed, choose the right solar panels and equipment, and design the electrical setup."
+            name: "System Design",
+            image: "/worker.jpg",
+            desc: "Plan how much energy is needed, choose the right solar panels and equipment, and design the electrical setup."
         },
         {
-          name: "Installation",
-          image: "/worker.jpg",
-          desc: "Put up the racking, install the solar panels, connect them to the inverters and wiring, and link to the main electricity or backup."
+            name: "Installation",
+            image: "/worker.jpg",
+            desc: "Put up the racking, install the solar panels, connect them to the inverters and wiring, and link to the main electricity or backup."
         },
         {
-          name: "Maintenance",
-          image: "/worker.jpg",
-          desc: "Set up a system to watch how it's working, make a plan to clean, check, and fix anything that needs it."
+            name: "Maintenance",
+            image: "/worker.jpg",
+            desc: "Set up a system to watch how it's working, make a plan to clean, check, and fix anything that needs it."
         }
-      ]
+    ]
 
 
 
     return (
-        <div className='w-screen h-[200vh] px-20 '>
-            <h1 className='text-6xl font-semibold max-w-[60vw] m-auto  mb-10 text-center' id={id}>
+        <div className='w-screen h-[200vh] px-5 md:px-20 mt-10'>
+            <h1 className='text-3xl md:text-6xl font-semibold max-w-[60vw] m-auto  mb-10 text-center' id={id}>
                 How we works
             </h1>
             <div className='md:px-10'>
@@ -46,7 +46,7 @@ const SolarSteps = ({id}) => {
                         initial={{ x: "-300px" }}
                         animate={isExperienceInView ? { x: 0 } : {}}
                         transition={{ delay: 0.5 }}
-                        className='font-bold text-2xl my-20' >EXPERIENCE</motion.h1>
+                        className='font-bold text-2xl my-20' >Working Flow</motion.h1>
                     {/* EXPEIRENCE LIST */}
                     <motion.div
                         // initial={{ x: "-300px" }}
@@ -60,9 +60,9 @@ const SolarSteps = ({id}) => {
                             {/* LEFT */}
                             <div className='w-1/3'>
                                 {/* JOB TITLE */}
-                                <div className='bg-white p-3 font-semibold rounded-b-lg rounded-s-lg'>Site Survey</div>
+                                <div className='bg-white p-2 md:p-3 font-semibold rounded-b-lg rounded-s-lg'>Site Survey</div>
                                 {/* JOB DATE */}
-                                <div className='p-3 text-white text-sm font-semibold'>{steps[0]['desc']}</div>
+                                <div className='p-1 pt-2 md:p-3 text-white text-xs md:text-sm font-semibold'>{steps[0]['desc']}</div>
                             </div>
                             {/* CENTER */}
                             <div className='w-1/6 flex justify-center'>
@@ -91,9 +91,9 @@ const SolarSteps = ({id}) => {
                             {/* RIGHT */}
                             <div className='w-1/3'>
                                 {/* JOB TITLE */}
-                                <div className='bg-white p-3 font-semibold rounded-b-lg rounded-s-lg'>System Design</div>
+                                <div className='bg-white p-2 md:p-3 font-semibold rounded-b-lg rounded-s-lg'>System Design</div>
                                 {/* JOB DATE */}
-                                <div className='p-3 text-white text-sm font-semibold'>{steps[1]["desc"]}</div>
+                                <div className='p-1 pt-2 md:p-3 text-white text-xs md:text-sm font-semibold'>{steps[1]["desc"]}</div>
                             </div>
                         </div>
 
@@ -102,9 +102,9 @@ const SolarSteps = ({id}) => {
                             {/* LEFT */}
                             <div className='w-1/3 '>
                                 {/* JOB TITLE */}
-                                <div className='bg-white p-3 font-semibold rounded-b-lg rounded-s-lg'>Installation</div>
+                                <div className='bg-white p-2 md:p-3 font-semibold rounded-b-lg rounded-s-lg'>Installation</div>
                                 {/* JOB DATE */}
-                                <div className='p-3 text-white text-sm font-semibold'>{steps[2]["desc"]}</div>
+                                <div className='p-1 pt-2 md:p-3 text-white text-xs md:text-sm font-semibold'>{steps[2]["desc"]}</div>
                             </div>
                             {/* CENTER */}
                             <div className='w-1/6flex justify-center '>
@@ -134,9 +134,9 @@ const SolarSteps = ({id}) => {
                             {/* RIGHT */}
                             <div className='w-1/3'>
                                 {/* JOB TITLE */}
-                                <div className='bg-white p-3 font-semibold rounded-b-lg rounded-s-lg'>Maintainence</div>
+                                <div className='bg-white p-2 md:p-3 font-semibold rounded-b-lg rounded-s-lg'>Maintainence</div>
                                 {/* JOB DATE */}
-                                <div className='p-3 text-white text-sm font-semibold'>{steps[3]["desc"]}</div>
+                                <div className='p-1 pt-2 md:p-3 text-white text-xs md:text-sm font-semibold'>{steps[3]["desc"]}</div>
                             </div>
                         </div>
 
