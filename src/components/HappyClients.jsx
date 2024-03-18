@@ -46,17 +46,34 @@ const reviews = [
 
 const HappyClients = () => {
     return (
-        <div className='w-screen h-200vh px-20 pb-20 flex flex-col items-center gap-10'>
+        <div className='w-screen h-200vh px-5 md:px-20 pb-20 flex flex-col items-center gap-10'>
             <h1 className='text-2xl font-normal'>Our Happy Clients</h1>
-            <h1 className='text-6xl font-semibold max-w-[60vw] m-auto text-center'>
+            <h1 className='text-3xl md:text-6xl font-semibold md:max-w-[60vw] m-auto text-center'>
                 Here's what our <span className="text-[#1addba]">satisfied clients</span> are saying.
             </h1>
             {/* Swiper Container */}
-            <div className='w-full'>
+            <div className='hidden md:inline w-full'>
                 <Swiper
                     modules={[Navigation, Pagination, Scrollbar, A11y]}
                     spaceBetween={50}
                     slidesPerView={3} // Number of slides visible at once
+                    navigation
+                    scrollbar={{ draggable: true }}
+                    pagination={{ clickable: true }}
+                >
+                    {reviews.map((client) => (
+                        <SwiperSlide key={client.id}>
+                            <ClientCard client={client} />
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            </div>
+            {/* Swiper Container Small Screen */}
+            <div className='inline md:hidden w-full'>
+                <Swiper
+                    modules={[Navigation, Pagination, Scrollbar, A11y]}
+                    spaceBetween={10}
+                    slidesPerView={1} // Number of slides visible at once
                     navigation
                     scrollbar={{ draggable: true }}
                     pagination={{ clickable: true }}
@@ -76,7 +93,7 @@ const HappyClients = () => {
 
 const ClientCard = ({ client }) => {
     return (
-        <div className='h-[400px] w-80 bg-purple-500 flex flex-col rounded-lg gap-5 p-5'>
+        <div className='h-[400px] w-80 bg-[#1f1e1f] flex flex-col rounded-lg gap-5 p-5'>
             <Image src={client.images} alt='img' width={300} height={200} className='z-50 w-[320px] h-[200px]  object-fill rounded-lg' />
             <h2 className='font-semibold pt-4'>{client.name}</h2>
             <p className='italic'>{client.review}</p>
