@@ -32,7 +32,7 @@ body {
 @media screen and (max-width: 786px) {
   .range-slider {
     -webkit-appearance: none;
-    width: 100px;
+    width: 80%;
     height: 10px;
     background-color: #1addba;
     border-radius: 50px;

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const PriceCalculator = ({id}) => {
+const PriceCalculator = ({ id }) => {
 
     const priceRef = useRef(null);
     const [priceValue, setPriceValue] = useState(50);
@@ -87,7 +87,7 @@ const PriceCalculator = ({id}) => {
     return (
         <div className='w-screen h-screen px-5 md:px-20 flex flex-col items-center gap-10 mt-10 md:mt-0' id={id} >
             <h1 className='text-4xl md:text-6xl font-bold md:font-semibold '>Calculate Your Cost</h1>
-            <div className='h-full  flex flex-col justify-start items-center gap-12 md:gap-20 py-5 overflow-x-hidden'>
+            <div className='h-full hidden md:flex flex-col justify-start items-center gap-12 md:gap-20 py-5 overflow-x-hidden'>
                 <div className="flex items-center justify-evenly gap-5 md:gap-10" ref={unitOfEnergyRef}>
                     <h2 className="text-xl font-semibold">Units: </h2>
                     <input
@@ -144,11 +144,69 @@ const PriceCalculator = ({id}) => {
                     <h1>Savings: {savings}</h1>
                     <h1>Total Price: {totalPrice}</h1>
                 </div>
-            <div className='h-[1px] w-screen  bg-white'></div>
-
-
+                <div className='h-[1px] w-screen  bg-white'></div>
             </div>
-            
+
+
+            <div className='h-full flex md:hidden flex-col justify-start items-center gap-12 md:gap-20 py-5 overflow-x-hidden'>
+                <div className="flex flex-col items-center justify-evenly gap-5 md:gap-10" ref={unitOfEnergyRef}>
+                    <h2 className="text-xl font-semibold">Units: </h2>
+                    <input
+                        onChange={(e) => updateEnergy(e)}
+                        type="range"
+                        value={unitOfEnergy}
+                        min={100}
+                        max={1000}
+                        step={50}
+                        className="range-slider"
+                    ></input>
+                    <h2 className="font-semibold text-xl md:text-2xl underline"
+                        style={{ textDecorationSkipInk: 'none', textDecorationThickness: '2px', textDecorationLine: 'underline' }}>
+                        {unitOfEnergy} unit
+                    </h2>
+                </div>
+
+                <div className="flex items-center justify-evenly gap-10" ref={interestRef}>
+                    <h2 className="text-xl font-semibold">Interest Rate: </h2>
+                    <input
+                        onChange={(e) => updateInterest(e)}
+                        type="range"
+                        value={interest}
+                        min={1}
+                        max={20}
+                        step={0.25}
+                        className="range-slider"
+                    ></input>
+                    <h2 className="font-semibold text-xl md:text-2xl underline"
+                        style={{ textDecorationSkipInk: 'none', textDecorationThickness: '2px', textDecorationLine: 'underline' }}>
+                        {interest} %
+                    </h2>
+                </div>
+
+                <div className="flex items-center justify-evenly gap-10" ref={tenureRef}>
+                    <h2 className="text-xl font-semibold">Year: </h2>
+                    <input
+                        onChange={(e) => updateTenure(e)}
+                        type="range"
+                        value={tenure}
+                        min={1}
+                        max={10}
+                        step={0.5}
+                        className="range-slider"
+                    ></input>
+                    <h2 className="font-semibold text-xl md:text-2xl underline"
+                        style={{ textDecorationSkipInk: 'none', textDecorationThickness: '2px', textDecorationLine: 'underline' }}>
+                        {tenure} years
+                    </h2>
+                </div>
+
+                <div className="flex flex-col gap-3 justify-start items-start font-semibold text-xl">
+                    <h1>Monthly Emi: {formatInterest(monthlyEMI, 2)}</h1>
+                    <h1>Savings: {savings}</h1>
+                    <h1>Total Price: {totalPrice}</h1>
+                </div>
+                <div className='h-[1px] w-screen  bg-white'></div>
+            </div>
         </div>
     )
 }
