@@ -12,7 +12,7 @@ const HomeSecondComponent = () => {
   const isTitleInView = useInView(titleRef);
 
   return (
-    <div className='md:flex mb-10  md:mb-0'>
+    <div className='md:flex mb-10 h-full md:mb-0'>
       {/* <div className='w-1/2 h-[calc(100vh-70px)] flex items-center mt-3 relative px-20'> */}
       <div className='md:w-1/2 md:h-[[calc(100vh-70px)]] flex items-center mt-3 relative px-5 md:px-20 overflow-hidden'>
         <Windmill />
