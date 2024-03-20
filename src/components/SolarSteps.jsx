@@ -1,6 +1,6 @@
 "use client"
 import React, { useRef } from 'react'
-import { motion, useInView, useScroll } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 
 const SolarSteps = ({ id }) => {
 
@@ -35,9 +35,13 @@ const SolarSteps = ({ id }) => {
 
     return (
         <div className='w-screen h-[200vh] px-5 md:px-20 mt-10'>
-            <h1 className='text-3xl md:text-6xl font-semibold max-w-[60vw] m-auto  mb-10 text-center' id={id}>
+            <motion.h1
+                initial={{ opacity: 0 }}
+                animate={isExperienceInView ? { opacity: 1 } : {}}
+                transition={{ delay: 0.5 }}
+                className='text-3xl md:text-6xl font-semibold max-w-[60vw] m-auto  mb-10 text-center' id={id}>
                 How we works
-            </h1>
+            </motion.h1>
             <div className='md:px-10'>
                 {/* EXPERIENCE CONTAINER */}
                 <div className='w-full h-full flex-col gap-12 justify-center  items-center pb-48' ref={experienceRef}>

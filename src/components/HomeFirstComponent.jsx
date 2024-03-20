@@ -1,12 +1,18 @@
 "use client";
 
 import Image from 'next/image'
-import React from 'react'
 import { FaBolt } from 'react-icons/fa';
 import ActionButton from './ActionButton';
 import { scrollToSection } from '@/functions/ScrollToSection';
+import React, { useRef } from 'react'
+import { motion, useInView } from 'framer-motion';
 
 const HomeFirstComponent = () => {
+
+
+    const titleRef = useRef();
+    const isTitleInView = useInView(titleRef);
+
     return (
         <div className='md:flex  mt-[100px] md:mt-20 pt-10 ' id='home'>
             <div className='md:hidden '>
@@ -19,8 +25,16 @@ const HomeFirstComponent = () => {
                     height="350" />
             </div>
             <div className=' w-full md:w-1/2 flex flex-col justify-center  gap-12 px-10 md:px-20'>
-                <h1 className='text-4xl md:text-6xl font-semibold '>Switch To Green With Innovative Solar Panel</h1>
-                <p className='italic text-2xl font-medium text-gray-200'>Green Energy. Clean Energy.</p>
+                <motion.h1
+                    initial={{ y: "30px", opacity: 0 }}
+                    animate={isTitleInView ? { y: 0, opacity: 1 } : {}}
+                    transition={{ delay: 0.5 }}
+                    className='text-4xl md:text-6xl font-semibold ' ref={titleRef}>Switch To Green With Innovative Solar Panel</motion.h1>
+                <motion.p
+                    initial={{ y: "30px", opacity: 0 }}
+                    animate={isTitleInView ? { y: 0, opacity: 1 } : {}}
+                    transition={{ delay: 0.5 }}
+                    className='italic text-2xl font-medium text-gray-200'>Green Energy. Clean Energy.</motion.p>
                 <div className='flex justify-start gap-5'>
                     <ActionButton text="Get a Quote" onclick={() => { scrollToSection("#contact") }}></ActionButton>
                     <ActionButton text="Call us Now" onclick={() => {
