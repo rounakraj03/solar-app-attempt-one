@@ -80,7 +80,7 @@ const Navbar = () => {
                         priority
                     />
 
-                    <h1 className='-m-4  font-bold text-base  md:text-xl text-white cursor-pointer' onClick={() => scrollToSection("#home")} >ANANTA POWER TECH</h1>
+                    <h1 className='-m-4 hidden md:inline  font-bold text-base  md:text-xl text-white cursor-pointer' onClick={() => scrollToSection("#home")} >ANANTA POWER TECH</h1>
                 </div>
                 {/* MENU BUTTON */}
                 <button className='md:hidden w-10 h-8 flex flex-col justify-between relative' onClick={() => changeIsCollapsed()}>
