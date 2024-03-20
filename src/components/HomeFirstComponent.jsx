@@ -28,8 +28,15 @@ const HomeFirstComponent = () => {
                 <h1 className='text-4xl md:text-6xl font-semibold '>Switch To Green With Innovative Solar Panel</h1>
                 <p className='italic text-2xl font-medium text-gray-200'>Green Energy. Clean Energy.</p>
                 <div className='flex justify-start gap-5'>
-                    <ActionButton text="Get a Quote" onclick={() => {handleClick("#contact")}}></ActionButton>
-                    <ActionButton text="Call us Now" onclick={() => {console.log("go to call screen")}}></ActionButton>
+                    <ActionButton text="Get a Quote" onclick={() => { handleClick("#contact") }}></ActionButton>
+                    <ActionButton text="Call us Now" onclick={() => {
+                        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                            window.location.href = 'tel:9873073373';
+                        } else {
+                            handleClick("#footer");
+                            console.log("No phone so footer")
+                        }
+                    }}></ActionButton>
                 </div>
                 <div className='flex justify-start gap-5'>
 
