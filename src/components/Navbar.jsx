@@ -86,7 +86,7 @@ const Navbar = () => {
 
                 <div className='  px-20 hidden md:inline '>
                     {routeList.map((item, index) => (
-                        <Navlink key={index} name={item.title} route={item.route}></Navlink>
+                        <Navlink key={index} name={item.title} route={item.route} closeMenu={() => {}}></Navlink>
                     ))}
                 </div>
                 <div className='hidden md:inline'>

@@ -29,10 +29,10 @@ body {
   background-color: green;
 }
 
-@media screen and (max-width: 786px) {
+@media screen and (max-width: 768px) {
   .range-slider {
     -webkit-appearance: none;
-    width: 80%;
+    width: 70vw;
     height: 10px;
     background-color: #1addba;
     border-radius: 50px;

@@ -69,10 +69,10 @@ const HappyClients = () => {
                 </Swiper>
             </div>
             {/* Swiper Container Small Screen */}
-            <div className='inline md:hidden w-full'>
+            <div className='inline md:hidden w-3/4'>
                 <Swiper
                     modules={[Navigation, Pagination, Scrollbar, A11y]}
-                    spaceBetween={10}
+                    // spaceBetween={40}
                     slidesPerView={1} // Number of slides visible at once
                     navigation
                     scrollbar={{ draggable: true }}

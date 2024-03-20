@@ -140,17 +140,17 @@ const PriceCalculator = ({ id }) => {
                 </div>
 
                 <div className="flex flex-col gap-3 justify-start items-start font-semibold text-xl">
-                    <h1>Monthly Emi: {formatInterest(monthlyEMI, 2)}</h1>
+                    <h1>Monthly Emi: ${formatInterest(monthlyEMI, 2)}</h1>
                     <h1>Savings: {savings}</h1>
                     <h1>Total Price: {totalPrice}</h1>
                 </div>
                 <div className='h-[1px] w-screen  bg-white'></div>
             </div>
 
-
+            {/* MOBILE UI */}
             <div className='h-full flex md:hidden flex-col justify-start items-center gap-12 md:gap-20 py-5 overflow-x-hidden'>
                 <div className="flex flex-col items-center justify-evenly gap-5 md:gap-10" ref={unitOfEnergyRef}>
-                    <h2 className="text-xl font-semibold">Units: </h2>
+                    <h2 className="text-lg font-semibold">Units:  ${unitOfEnergy} unit</h2>
                     <input
                         onChange={(e) => updateEnergy(e)}
                         type="range"
@@ -160,14 +160,10 @@ const PriceCalculator = ({ id }) => {
                         step={50}
                         className="range-slider"
                     ></input>
-                    <h2 className="font-semibold text-xl md:text-2xl underline"
-                        style={{ textDecorationSkipInk: 'none', textDecorationThickness: '2px', textDecorationLine: 'underline' }}>
-                        {unitOfEnergy} unit
-                    </h2>
                 </div>
 
-                <div className="flex items-center justify-evenly gap-10" ref={interestRef}>
-                    <h2 className="text-xl font-semibold">Interest Rate: </h2>
+                <div className="flex flex-col items-center justify-evenly gap-5" ref={interestRef}>
+                    <h2 className="text-lg font-semibold">Interest Rate: {interest} % </h2>
                     <input
                         onChange={(e) => updateInterest(e)}
                         type="range"
@@ -177,14 +173,10 @@ const PriceCalculator = ({ id }) => {
                         step={0.25}
                         className="range-slider"
                     ></input>
-                    <h2 className="font-semibold text-xl md:text-2xl underline"
-                        style={{ textDecorationSkipInk: 'none', textDecorationThickness: '2px', textDecorationLine: 'underline' }}>
-                        {interest} %
-                    </h2>
                 </div>
 
-                <div className="flex items-center justify-evenly gap-10" ref={tenureRef}>
-                    <h2 className="text-xl font-semibold">Year: </h2>
+                <div className="flex flex-col items-center justify-evenly gap-5" ref={tenureRef}>
+                    <h2 className="text-xl font-semibold">Year: {tenure} years</h2>
                     <input
                         onChange={(e) => updateTenure(e)}
                         type="range"
@@ -194,13 +186,9 @@ const PriceCalculator = ({ id }) => {
                         step={0.5}
                         className="range-slider"
                     ></input>
-                    <h2 className="font-semibold text-xl md:text-2xl underline"
-                        style={{ textDecorationSkipInk: 'none', textDecorationThickness: '2px', textDecorationLine: 'underline' }}>
-                        {tenure} years
-                    </h2>
                 </div>
 
-                <div className="flex flex-col gap-3 justify-start items-start font-semibold text-xl">
+                <div className="flex flex-col gap-3 justify-start items-start font-bold text-lg">
                     <h1>Monthly Emi: {formatInterest(monthlyEMI, 2)}</h1>
                     <h1>Savings: {savings}</h1>
                     <h1>Total Price: {totalPrice}</h1>

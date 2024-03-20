@@ -18,11 +18,11 @@ const ContactForm = ({id}) => {
 
     return (
         <div className='w-screen h-200vh px-20 flex flex-col items-center gap-10' id={id}>
-            <h1 className='text-6xl font-semibold max-w-[60vw] m-auto text-center'>
+            <h1 className=' text-4xl md:text-6xl font-semibold max-w-[60vw] m-auto text-center'>
                 Contact Us
             </h1>
             {/* CONTAINER FORM */}
-            <div className='h-full w-[500px]'>
+            <div className='h-full w-full md:w-[500px] md:px-[10px]'>
                 <form ref={form} onSubmit={sendEmail} className='flex flex-col gap-10 justify-center items-center'>
                     <input type='text' placeholder='Name' className='w-full p-1 text-xl text-[#1addba] bg-transparent border-b-2 border-b-[#1addba] outline-none' name='name'></input>
                     <input type='text' placeholder='Phone Number' className='w-full p-1 text-xl text-[#1addba] bg-transparent border-b-2 border-b-[#1addba] outline-none' name='phoneNumber'></input>
