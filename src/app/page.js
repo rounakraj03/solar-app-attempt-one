@@ -2,6 +2,7 @@ import ActionButton from '@/components/ActionButton'
 import ContactForm from '@/components/ContactForm';
 import FooterPage from '@/components/Footer';
 import HappyClients from '@/components/HappyClients';
+import HomeFirstComponent from '@/components/HomeFirstComponent';
 import HomeSecondComponent from '@/components/HomeSecondComponent';
 import Navbar from '@/components/Navbar'
 import PriceCalculator from '@/components/PriceCalculator';
@@ -15,71 +16,7 @@ const page = () => {
 
     <div className='h-screen w-screen flex flex-col relative'>
       <div className='min-h-[70px] max-h-[400px] w-full fixed bg-black z-50 '><Navbar /></div>
-      <div className='md:flex  mt-[100px] md:mt-20 pt-10 ' id='home'>
-        <div className='md:hidden '>
-        <Image
-          style={{ width: "300px", height: "200px", objectFit: 'fill' }}
-          className=' rounded-xl m-auto  mb-10'
-          src="/worker.jpg"
-          alt="My SVG"
-          width="350"
-          height="350" />
-        </div>
-        <div className=' w-full md:w-1/2 flex flex-col justify-center  gap-12 px-10 md:px-20'>
-          <h1 className='text-4xl md:text-6xl font-semibold '>Switch To Green With Innovative Solar Panel</h1>
-          <p className='italic text-2xl font-medium text-gray-200'>Green Energy. Clean Energy.</p>
-          <div className='flex justify-start gap-5'>
-            <ActionButton text="Get a Quote"></ActionButton>
-            <ActionButton text="Call us Now"></ActionButton>
-          </div>
-          <div className='flex justify-start gap-5'>
-
-            <div className='flex flex-col items-center'>
-              <div className='flex text-4xl'>
-                <span className='font-semibold'>10</span>
-                <span className='text-[#1addba] font-bold'>+</span>
-              </div>
-              <div className='text-xl font-medium'>Years</div>
-            </div>
-
-            <div className='flex flex-col items-center'>
-              <div className='flex text-4xl'>
-                <span className='font-semibold'>954</span>
-                <span className='text-[#1addba] font-bold'>+</span>
-              </div>
-              <div className='text-xl font-medium'>Projects</div>
-            </div>
-
-            <div className='flex flex-col items-center'>
-              <div className='flex text-4xl'>
-                <span className='font-semibold'>500</span>
-                <span className='text-[#1addba] font-bold'>+</span>
-              </div>
-              <div className='text-xl font-medium'>Clients</div>
-            </div>
-
-          </div>
-        </div>
-
-        <div className='hidden w-1/2 h-[calc(100vh-70px)] md:flex items-center mt-3 relative'>
-          <Image
-            style={{ width: "40vw", height: "80vh", objectFit: 'cover' }}
-            className='rounded-xl'
-            src="/worker.jpg"
-            alt="My SVG"
-            width="350"
-            height="350" />
-          <div className='flex flex-col items-center bg-[#babbbf72] absolute bottom-20 left-0 p-2 rounded-r-md'>
-            <div className='flex flex-col text-xl'>
-              <span className='font-semibold'>New Solar Panels</span>
-              <div className='flex items-center'>
-                <span className='text-[#1addba]  text-lg'>+70% Efficiency</span>
-                <FaBolt className='text-[#1addba] text-2xl'></FaBolt>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <HomeFirstComponent></HomeFirstComponent>
 
       {/* SECOND CONTAINER */}
       <div className='md-5 md:mt-0'></div>
@@ -97,7 +34,7 @@ const page = () => {
       <ContactForm id="contact"></ContactForm>
 
       {/* SIXTH CONTAINER */}
-      <FooterPage></FooterPage>
+      <FooterPage id="footer"></FooterPage>
 
 
     </div>

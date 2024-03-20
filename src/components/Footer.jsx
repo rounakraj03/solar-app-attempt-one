@@ -1,3 +1,5 @@
+"use client"
+
 import Image from 'next/image'
 import birdLogo from '../../public/bird_logo.svg'
 import React from 'react'
@@ -6,6 +8,14 @@ import { FaWhatsapp } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
 
 const FooterPage = () => {
+    
+    const handleClick = (route) => {
+        const section = document.querySelector(route);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest', duration: 1000 });
+        }
+    };
+
     return (
         <div className='w-full  flex flex-col items-center justify-center  '>
             <div className='flex flex-col md:flex-row w-full'>
@@ -24,12 +34,12 @@ const FooterPage = () => {
                     <h3 className='-m-4 font-bold text-xl text-white'>Useful Links</h3>
                     <div className='flex flex-col items-center gap-5'>
                         <div className='flex gap-5'>
-                            <p className='cursor-pointer'>Home</p>
-                            <p className='cursor-pointer'>Calculate-EMI</p>
+                            <p className='cursor-pointer' onClick={() => handleClick("#home")} >Home</p>
+                            <p className='cursor-pointer'  onClick={() => handleClick("#calculate-emi")}>Calculate-EMI</p>
                         </div>
                         <div className='flex gap-5'>
-                            <p className='cursor-pointer'>Contact</p>
-                            <p className='cursor-pointer'>About</p>
+                            <p className='cursor-pointer' onClick={() => handleClick("#contact")} >Contact</p>
+                            <p className='cursor-pointer' onClick={() => handleClick("#about")} >About</p>
                         </div>
                     </div>
 

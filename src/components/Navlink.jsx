@@ -5,27 +5,28 @@ import React, { useEffect, useState } from 'react';
 const Navlink = ({ name, route, closeMenu }) => {
   const [isActive, setIsActive] = useState(false);
 
-  useEffect(() => {
-    const handleHashChange = () => {
-      console.log("window.location.hash", window.location.hash)
-      setIsActive(window.location.hash === route);
-    };
+  // useEffect(() => {
+  //   const handleHashChange = () => {
+  //     console.log("window.location.hash", window.location.hash)
+  //     setIsActive(window.location.hash === route);
+  //   };
 
-    window.addEventListener('hashchange', handleHashChange);
-    handleHashChange(); // Check initial hash
+  //   window.addEventListener('hashchange', handleHashChange);
+  //   handleHashChange();
 
-    return () => {
-      window.removeEventListener('hashchange', handleHashChange);
-    };
-  }, [route]);
+  //   return () => {
+  //     window.removeEventListener('hashchange', handleHashChange);
+  //   };
+  // }, [route]);
 
   const handleClick = (event) => {
     event.preventDefault();
-    closeMenu(); 
-    window.location.hash = route;
+    closeMenu();
     const section = document.querySelector(route);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
+      // window.location.hash = route;
+      // setIsActive(window.location.hash === route);
     }
   };
 
