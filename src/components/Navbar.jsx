@@ -75,6 +75,8 @@ const Navbar = () => {
             <div className='min-h-[70px] mt-5 w-screen max-w-7xl flex items-center justify-between md:justify-evenly  md:m-auto px-2 '>
                 <div className='flex items-center gap-0  md:-mx-20'>
                     <Image
+                        className='cursor-pointer'
+                        onClick={() => handleClick("#home")}
                         src={birdLogo}
                         alt="My SVG"
                         width={100}
@@ -82,7 +84,7 @@ const Navbar = () => {
                         priority
                     />
 
-                    <h1 className='-m-4  font-bold text-base  md:text-xl text-white'>ANANTA POWER TECH</h1>
+                    <h1 className='-m-4  font-bold text-base  md:text-xl text-white cursor-pointer' onClick={() => handleClick("#home")} >ANANTA POWER TECH</h1>
                 </div>
                 {/* MENU BUTTON */}
                 <button className='md:hidden w-10 h-8 flex flex-col justify-between relative' onClick={() => changeIsCollapsed()}>
@@ -93,11 +95,11 @@ const Navbar = () => {
 
                 <div className='  px-20 hidden md:inline '>
                     {routeList.map((item, index) => (
-                        <Navlink key={index} name={item.title} route={item.route} closeMenu={() => {}}></Navlink>
+                        <Navlink key={index} name={item.title} route={item.route} closeMenu={() => { }}></Navlink>
                     ))}
                 </div>
                 <div className='hidden md:inline'>
-                    <ActionButton text="Call Now" onclick={() => {handleClick("#footer")}}></ActionButton>
+                    <ActionButton text="Call Now" onclick={() => { handleClick("#footer") }}></ActionButton>
                 </div>
             </div>
             {isCollapsed && (
@@ -109,7 +111,13 @@ const Navbar = () => {
                             <Navlink key={index} name={item.title} route={item.route} closeMenu={changeIsCollapsed}></Navlink>
                         ))}
                         <div className='w-[100px] h-[50px] mx-5'>
-                            <ActionButton text="Call Now"></ActionButton>
+                            <ActionButton text="Call Now" onclick={() => {
+                                if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                                    window.location.href = 'tel:9873073373'; // Replace with your phone number
+                                } else {
+                                    handleClick("#footer");
+                                }
+                            }}></ActionButton>
                         </div>
                     </div>
                 </motion.div>
