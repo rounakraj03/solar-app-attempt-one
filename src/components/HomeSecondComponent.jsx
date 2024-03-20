@@ -5,8 +5,10 @@ import React from 'react'
 import ActionButton from './ActionButton'
 import { FaBolt } from 'react-icons/fa'
 import Windmill from './Windmill'
+import { scrollToSection } from '@/functions/ScrollToSection'
 
 const HomeSecondComponent = () => {
+ 
   return (
     <div className='md:flex mb-10  md:mb-0'>
       {/* <div className='w-1/2 h-[calc(100vh-70px)] flex items-center mt-3 relative px-20'> */}
@@ -22,7 +24,7 @@ const HomeSecondComponent = () => {
             if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
               window.location.href = 'tel:9873073373'; // Replace with your phone number
             } else {
-              handleClick("#footer");
+              scrollToSection("#footer");
             }
           }}></ActionButton>
         </div>

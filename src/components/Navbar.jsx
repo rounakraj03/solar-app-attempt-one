@@ -6,6 +6,7 @@ import Image from 'next/image'
 import Navlink from './Navlink';
 import ActionButton from './ActionButton';
 import { motion } from 'framer-motion';
+import { scrollToSection } from '@/functions/ScrollToSection';
 
 
 const Navbar = () => {
@@ -56,12 +57,7 @@ const Navbar = () => {
         }
     }
 
-    const handleClick = (route) => {
-        const section = document.querySelector(route);
-        if (section) {
-            section.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest', duration: 1000 });
-        }
-    };
+   
 
 
     const routeList = [
@@ -76,7 +72,7 @@ const Navbar = () => {
                 <div className='flex items-center gap-0  md:-mx-20'>
                     <Image
                         className='cursor-pointer'
-                        onClick={() => handleClick("#home")}
+                        onClick={() => scrollToSection("#home")}
                         src={birdLogo}
                         alt="My SVG"
                         width={100}
@@ -84,7 +80,7 @@ const Navbar = () => {
                         priority
                     />
 
-                    <h1 className='-m-4  font-bold text-base  md:text-xl text-white cursor-pointer' onClick={() => handleClick("#home")} >ANANTA POWER TECH</h1>
+                    <h1 className='-m-4  font-bold text-base  md:text-xl text-white cursor-pointer' onClick={() => scrollToSection("#home")} >ANANTA POWER TECH</h1>
                 </div>
                 {/* MENU BUTTON */}
                 <button className='md:hidden w-10 h-8 flex flex-col justify-between relative' onClick={() => changeIsCollapsed()}>
@@ -99,7 +95,7 @@ const Navbar = () => {
                     ))}
                 </div>
                 <div className='hidden md:inline'>
-                    <ActionButton text="Call Now" onclick={() => { handleClick("#footer") }}></ActionButton>
+                    <ActionButton text="Call Now" onclick={() => { scrollToSection("#footer") }}></ActionButton>
                 </div>
             </div>
             {isCollapsed && (
@@ -115,7 +111,7 @@ const Navbar = () => {
                                 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
                                     window.location.href = 'tel:9873073373'; // Replace with your phone number
                                 } else {
-                                    handleClick("#footer");
+                                    scrollToSection("#footer");
                                 }
                             }}></ActionButton>
                         </div>

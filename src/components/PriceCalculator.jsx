@@ -11,7 +11,7 @@ const PriceCalculator = ({ id }) => {
     const unitOfEnergyRef = useRef(null);
     const tenureRef = useRef(null);
     const interestRef = useRef(null);
-    const [unitOfEnergy, setUnitOfEnergy] = useState(100); // Initial value for unit of energy
+    const [unitOfEnergy, setUnitOfEnergy] = useState(200); // Initial value for unit of energy
     const [tenure, setTenure] = useState(2.5); // Initial value for tenure
     const [interest, setInterest] = useState(7.50); // Initial value for tenure
     const [savings, setSavings] = useState(0);

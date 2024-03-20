@@ -6,15 +6,9 @@ import React from 'react'
 import { MdCall } from "react-icons/md";
 import { FaWhatsapp } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
+import { scrollToSection } from '@/functions/ScrollToSection';
 
 const FooterPage = ({ id }) => {
-
-    const handleClick = (route) => {
-        const section = document.querySelector(route);
-        if (section) {
-            section.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest', duration: 1000 });
-        }
-    };
 
     return (
         <div className='w-full  flex flex-col items-center justify-center' id={id}>
@@ -22,25 +16,25 @@ const FooterPage = ({ id }) => {
                 <div className='w-full md:w-1/3 h-[200px] flex flex-col items-center'>
                     <Image
                         className='cursor-pointer'
-                        onClick={() => handleClick("#home")}
+                        onClick={() => scrollToSection("#home")}
                         src={birdLogo}
                         alt="My SVG"
                         width={150}
                         height={150}
                         priority
                     />
-                    <h1 className='-m-4 font-bold text-xl text-white cursor-pointer' onClick={() => handleClick("#home")}>ANANTA POWER TECH</h1>
+                    <h1 className='-m-4 font-bold text-xl text-white cursor-pointer' onClick={() => scrollToSection("#home")}>ANANTA POWER TECH</h1>
                 </div>
                 <div className='w-full md:w-1/3 h-[200px] flex flex-col gap-10 justify-center items-center '>
                     <h3 className='-m-4 font-bold text-xl text-white'>Useful Links</h3>
                     <div className='flex flex-col items-center gap-5'>
                         <div className='flex gap-5'>
-                            <p className='cursor-pointer hover:text-[#1addba]' onClick={() => handleClick("#home")} >Home</p>
-                            <p className='cursor-pointer hover:text-[#1addba]' onClick={() => handleClick("#calculate-emi")}>Calculate-EMI</p>
+                            <p className='cursor-pointer hover:text-[#1addba]' onClick={() => scrollToSection("#home")} >Home</p>
+                            <p className='cursor-pointer hover:text-[#1addba]' onClick={() => scrollToSection("#calculate-emi")}>Calculate-EMI</p>
                         </div>
                         <div className='flex gap-5'>
-                            <p className='cursor-pointer hover:text-[#1addba]' onClick={() => handleClick("#contact")} >Contact</p>
-                            <p className='cursor-pointer hover:text-[#1addba]' onClick={() => handleClick("#about")} >About</p>
+                            <p className='cursor-pointer hover:text-[#1addba]' onClick={() => scrollToSection("#contact")} >Contact</p>
+                            <p className='cursor-pointer hover:text-[#1addba]' onClick={() => scrollToSection("#about")} >About</p>
                         </div>
                     </div>
 
@@ -52,7 +46,7 @@ const FooterPage = ({ id }) => {
                                 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
                                     window.location.href = 'tel:9873073373'; 
                                 } else {
-                                    handleClick("#footer");
+                                    scrollToSection("#footer");
                                     console.log("No phone so footer")
                                 }
                             }} ><MdCall /> 9873073373</p>
