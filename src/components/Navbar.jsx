@@ -56,6 +56,13 @@ const Navbar = () => {
         }
     }
 
+    const handleClick = (route) => {
+        const section = document.querySelector(route);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest', duration: 1000 });
+        }
+    };
+
 
     const routeList = [
         { title: "Home", route: "#home" },
@@ -90,7 +97,7 @@ const Navbar = () => {
                     ))}
                 </div>
                 <div className='hidden md:inline'>
-                    <ActionButton text="Call Now"></ActionButton>
+                    <ActionButton text="Call Now" onclick={() => {handleClick("#footer")}}></ActionButton>
                 </div>
             </div>
             {isCollapsed && (

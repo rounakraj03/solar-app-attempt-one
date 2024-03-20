@@ -7,7 +7,7 @@ import { MdCall } from "react-icons/md";
 import { FaWhatsapp } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
 
-const FooterPage = () => {
+const FooterPage = ({id}) => {
     
     const handleClick = (route) => {
         const section = document.querySelector(route);
@@ -17,7 +17,7 @@ const FooterPage = () => {
     };
 
     return (
-        <div className='w-full  flex flex-col items-center justify-center  '>
+        <div className='w-full  flex flex-col items-center justify-center' id={id}>
             <div className='flex flex-col md:flex-row w-full'>
                 <div className='w-full md:w-1/3 h-[200px] flex flex-col items-center'>
                     <Image
