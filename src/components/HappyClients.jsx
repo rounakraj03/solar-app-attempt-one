@@ -49,7 +49,7 @@ const HappyClients = () => {
         <div className='w-screen h-200vh px-5 md:px-20 pb-20 flex flex-col items-center gap-10'>
             <h1 className='text-2xl font-normal'>Our Happy Clients</h1>
             <h1 className='text-3xl md:text-6xl font-semibold md:max-w-[60vw] m-auto text-center'>
-                Here's what our <span className="text-[#1addba]">satisfied clients</span> are saying.
+                Here&apos;s what our <span className="text-[#1addba]">satisfied clients</span> are saying.
             </h1>
             {/* Swiper Container */}
             <div className='hidden md:inline w-full'>
